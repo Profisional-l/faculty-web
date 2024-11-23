@@ -1,0 +1,30 @@
+@use 'variables';
+
+// Мобильные устройства
+@media (max-width: 768px) {
+  .container {
+    padding: 0px 25px;
+  }
+}
+
+// Планшеты
+@media (min-width: 768px) {
+  .container {
+    padding: 0 clamp(25px, 5svw, 50px);
+  }
+}
+
+// Десктопы
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 clamp(50px, 8svw, 150px);
+  }
+}
+
+// На экранах больших размеров
+@media (min-width: 1920px) {
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+}
